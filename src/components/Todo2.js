@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import images from './images.jpeg'
 
 const Todo2 = () => {
+    
+    const [input, setInput] = useState('');
+  const  handleChange=(e)=>{
+
+        setInput(e.target.value)
+        
+    }
     return (
+    
         <div className='main-div'>
 
             <figure>
@@ -13,11 +21,12 @@ const Todo2 = () => {
             <div className='child-div'>
 
 
-                <span> <input className='inputData' type='text' name='enterTask' placeholder='Enter Task' />   </span>
+                <span> <input className='inputData' type='text' name='enterTask' placeholder='Enter Task' value={input} onChange={handleChange} />   </span>
                 <button className='add'> Add item </button>
 
             </div>
 
+          
 
 
 
