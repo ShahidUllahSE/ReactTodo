@@ -7,25 +7,25 @@ import { FaTrashAlt } from "react-icons/fa";
 const Todo2 = () => {
 
     const [input, setInput] = useState('');
-    const [items, setItems] = useState([])
-    const [input2, setInput2] = useState('')
-    const [time, setTime] = useState([])
+    const [items, setItems] = useState ( [] )
+    const [input2, setInput2] = useState ('')
+    const [time, setTime] = useState ( [] )
 
     const handleChange = (e) => {
 
-        setInput(e.target.value)
+        setInput ( e.target.value )
     }
 
     const handleChange2 = (e) => {
-        setInput2(e.target.value)
+        setInput2 ( e.target.value )
     }
 
     const handleAdd = (e) => {
         e.preventDefault();
-        setItems([...items, input])
-        setTime([...time, input2])
-        setInput('')
-        setInput2('')
+        setItems ( [...items, input] )
+        setTime ( [...time, input2] )
+        setInput ('')
+        setInput2 ('')
     }
 
     const handleDelete = (id) => {
@@ -33,18 +33,18 @@ const Todo2 = () => {
 
             return ind !== id;
         })
-        const updatedTime = time.filter((elem, ind) => {
+        const updatedTime = time.filter ( (elem, ind) => {
             return ind !== id;
         })
 
-        setItems(updatedItems)
-        setTime(updatedTime)
+        setItems ( updatedItems )
+        setTime ( updatedTime )
     }
 
     const handleReset = () => {
 
-        setItems([])
-        setTime([])
+        setItems ( [] )
+        setTime ( [] )
     }
     return (
 
