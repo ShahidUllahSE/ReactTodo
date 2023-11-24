@@ -27,6 +27,11 @@ const Todo2 = () => {
         setItems(updatedItems)
     }
 
+    const handleReset = () => {
+
+        setItems([])
+    }
+
     return (
 
         <div className='main-div'>
@@ -41,7 +46,7 @@ const Todo2 = () => {
 
                 <span> <input className='inputData' type='text' name='enterTask' placeholder='Enter Task' value={input} onChange={handleChange} />   </span>
                 <button className='add' onClick={handleAdd} > Add item </button>
-               
+                <button className='add' onClick={handleReset} > Reset </button>
 
 
 
