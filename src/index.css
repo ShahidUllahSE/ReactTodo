@@ -2,14 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  background-color: rgb(5, 13, 72);
+  background-color: rgb(156, 210, 216);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
+  color: rgb(19, 19, 19);
+  background-image: url(D:\web\reactTodo\todo\src\components\image2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 
 }
 
@@ -20,6 +25,7 @@ code {
 
 .inputData{
   border-radius: 4px;
+  color: rgb(13, 11, 11);
 }
 
 .main-div{
@@ -36,9 +42,10 @@ code {
   box-sizing: border-box;
   margin-top: 5px;
   width: 300px;
-  background-color: gray;
-  color: white;
-  border-color:black;
+  background-color: rgb(178, 227, 238);
+  color: rgb(40, 14, 14);
+  border-color:rgb(249, 249, 249);
+  margin-top: 20px ;
 
   
 }
@@ -48,4 +55,13 @@ code {
   background-color: gray;
   color: white;
   box-sizing: border-box;
+  margin-left: 4px;
+  margin-top: 8px;
 }
+
+.trash{
+  width: 12px;
+  height: 12px;
+  margin-left: 2px;
+}
+
