@@ -6,10 +6,10 @@ import { FaTrashAlt } from "react-icons/fa";
 
 const Todo2 = () => {
 
-    const [input, setInput] = useState('');
-    const [items, setItems] = useState ( [] )
-    const [input2, setInput2] = useState ('')
-    const [time, setTime] = useState ( [] )
+    const [ input, setInput ] = useState('');
+    const [ items, setItems ] = useState ( [] )
+    const [ input2, setInput2 ] = useState ('')
+    const [ time, setTime ] = useState ( [] )
 
     const handleChange = (e) => {
 
@@ -33,7 +33,7 @@ const Todo2 = () => {
 
             return ind !== id;
         })
-        const updatedTime = time.filter ( (elem, ind) => {
+        const updatedTime = time.filter ( ( elem, ind ) => {
             return ind !== id;
         })
 
@@ -56,7 +56,7 @@ const Todo2 = () => {
                  </figure>
 
          <div className='child-div'>
-                    <form onSubmit={handleAdd}>
+                    <form onSubmit = { handleAdd } >
                     <span> <input className='inputData' type='text' name='enterTask' placeholder='Enter Task' value={input} onChange={handleChange} />
                         {/* <FaPlus className='trash' onClick={handleAdd} /> */}
                     </span>
@@ -67,7 +67,7 @@ const Todo2 = () => {
 
                 <div>
 
-                    <form onSubmit={handleAdd}>
+                    <form onSubmit = { handleAdd } >
 
                     <input className='inputData' title='Enter Task Duration Here' type='text' name='enterDuration' placeholder='Duration Of task in Mnts' value={input2} onChange={handleChange2} />
                 </form>
