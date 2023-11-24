@@ -5,23 +5,22 @@ const Todo2 = () => {
 
     const [input, setInput] = useState('');
     const [items, setItems] = useState([])
+
     const handleChange = (e) => {
 
         setInput(e.target.value)
-
     }
 
     const handleAdd = (e) => {
+        e.preventDefault();
         setItems([...items, input])
         setInput('')
-
-
     }
 
     const handleDelete = (id) => {
         const updatedItems = items.filter((elem, ind) => {
 
-            return ind !==id;
+            return ind !== id;
         })
 
         setItems(updatedItems)
@@ -42,43 +41,30 @@ const Todo2 = () => {
             </figure>
 
             <div className='child-div'>
-
-
+                <form onSubmit={handleAdd}>
                 <span> <input className='inputData' type='text' name='enterTask' placeholder='Enter Task' value={input} onChange={handleChange} />   </span>
                 <button className='add' onClick={handleAdd} > Add item </button>
                 <button className='add' onClick={handleReset} > Reset </button>
 
-
-
+                </form>
+              
             </div>
-
-
-
-
 
             {
 
-      items.map((item, ind) => {
-                    
-                    
-                    
-                    return ( 
-                        <div key={ind}> 
-          
-                    
-                    <h3>{item}</h3>
-                    {/* // <i className='far fa-trash-alt add-btn' title='deleteItem' onClick={()=>handleDelete(ind)}></i> */}
-                     <button className='add' onClick={() => handleDelete(ind)}> Delete Item </button>
-                    </div>
+                items.map((item, ind) => {
+
+                    return (
+
+                        <div key={ind}>
+                            <h3>{item}</h3>
+                            <button className='add' onClick={() => handleDelete(ind)}> Delete Item </button>
+                        </div>
 
                     )
-
-
                 })
 
             }
-
-
 
         </div>
     )
